@@ -1,0 +1,47 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f5;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.envelope-container {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.envelope {
+  width: 250px;
+  transition: transform 1s ease;
+}
+
+.envelope.opened {
+  transform: rotateX(180deg);
+  opacity: 0;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffccdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 20px;
+  color: #d1007d;
+  width: 250px;
+  display: none;
+}
+
+.message.show {
+  display: block;
+}
